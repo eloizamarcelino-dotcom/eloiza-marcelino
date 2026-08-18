@@ -6,7 +6,7 @@ public class metodocomparametro {
 
         desempenharCalculo(5,4,2);
     }
-    pubic static void desempenharCalculo(int n1,int n2, int n3){
+     public static void desempenharCalculo(int n1,int n2, int n3){
         int result = (n1+n2)*n3;
         System.out.println(result);
     }
