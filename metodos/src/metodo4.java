@@ -11,7 +11,7 @@ public class metodo4 {
     public static void imprimirmaior(int vetor[]){
         double soma = 0;
         int maiorValor = Integer.MIN_VALUE;
-        for (int i=0;i < vetor.length ; i++) {
+        for (int i=0;i < vetor.length ; i++) { //length tamanho do vetor
     soma += vetor[i];
 }
         double media = soma / vetor.length;

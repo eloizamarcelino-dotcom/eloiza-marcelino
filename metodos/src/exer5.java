@@ -15,5 +15,6 @@ public class exer5 {
 
     }
     public static void numeropertobase (int base , int num1 , int num2);
+    int distanciaBase1 = Math.abs(  num1 - base );
 
 }
