@@ -14,7 +14,6 @@ public class exrecicio7 {
 
         System.out.println("Qua a estação do ano? ");
         int estacao = input.nextInt();
-        
 
         if (estacao == 1) {
             verao();
@@ -27,17 +26,17 @@ public class exrecicio7 {
             inverno();
         }
     }
-    public static void verao() {
-        System.out.println(" O clima esta quente e abafado!");
+    public static String verao()  {
+        return "É verõ e o tmepo está quente ";
     }
-    public static void outono() {
-        System.out.println("As folhas estão laranjas!");
+    public static String outono() {
+        return "As folhas estão laranjas!";
     }
-    public static void primavera() {
-        System.out.println("Está florindo a veetação!");
+    public static String primavera() {
+        return "Está florindo a veetação!";
     }
-    public static void inverno() {
-        System.out.println("Está muito frio!");
+    public static String inverno() {
+        return "Está muito frio!";
     }
 
 }

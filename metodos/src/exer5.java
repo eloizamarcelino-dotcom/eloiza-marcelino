@@ -14,7 +14,8 @@ public class exer5 {
         int num2 = sc.nextInt();
 
     }
-    public static void numeropertobase (int base , int num1 , int num2);
-    int distanciaBase1 = Math.abs(  num1 - base );
+    public static void numeropertobase (int base , int num1 , int num2){
+
+    }
 
 }
