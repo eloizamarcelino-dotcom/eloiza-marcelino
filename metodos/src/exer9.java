@@ -5,9 +5,17 @@ public class exer9 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Digite um numero par ou impar :");
-        boolean impar = sc.hasNextBoolean();
-    }
-    public static boolean par (int num){
+        int numero = sc.nextInt();
 
+        System.out.println(determinarParouImpar(numero));
     }
+    public static boolean determinarParouImpar (int numero){
+        if (numero % 2 == 0 ) {
+            return true;
+            
+        }else { // não é obrigatorio
+            return false;
+        }
+    }
+
 }
