@@ -33,7 +33,7 @@ public class exrecicio7 {
         return "As folhas estão laranjas!";
     }
     public static String primavera() {
-        return "Está florindo a veetação!";
+        return "Está florindo a vegetação!";
     }
     public static String inverno() {
         return "Está muito frio!";
