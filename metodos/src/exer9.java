@@ -9,13 +9,8 @@ public class exer9 {
 
         System.out.println(determinarParouImpar(numero));
     }
-    public static boolean determinarParouImpar (int numero){
-        if (numero % 2 == 0 ) { // resto que sobrar para ver se é par ou impar
-            return true;
-
-        }else { // não é obrigatorio pois chegou no if ja ai do metodo
-            return false;
-        }
+    public static boolean determinarParouImpar (int numero) {
+        return numero % 2 ==0;
     }
 
 }
