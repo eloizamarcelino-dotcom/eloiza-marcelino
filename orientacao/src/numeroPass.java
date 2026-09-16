@@ -5,14 +5,12 @@ public class numeroPass {
         elonmusk.Passageiro = 3;
         elonmusk.queimaPorMin = 50;
         elonmusk.velocidadeMax = 1.000;
+        elonmusk.capcombustivel = 600;
 
-        Aeronave espace = new Aeronave();
-        espace.velocidadeMax = 1.500;
-        espace.modelo = "rapidao";
-        espace.queimaPorMin = 100;
-        espace.Passageiro = 2;
-
-        Aeronave elonmusk = new Aeronave();
     }
 
+
 }
+//public double CalcuarAutonomia(){
+  //  return capcombustivel / queimaPorMin;
+//}
