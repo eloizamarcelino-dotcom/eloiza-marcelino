@@ -1,5 +1,5 @@
 public class numeroPass {
-    public static void main(String[] args) {
+  /*  public static void main(String[] args) {
         Aeronave elonmusk = new Aeronave();
         elonmusk.modelo = "foguete que da ré";
         elonmusk.Passageiro = 3;
@@ -7,7 +7,7 @@ public class numeroPass {
         elonmusk.velocidadeMax = 1.000;
         elonmusk.capcombustivel = 600;
 
-    }
+    }*/
 
 
 }
