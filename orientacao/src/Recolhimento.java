@@ -22,8 +22,8 @@ public class Recolhimento {
     private double RendaAnual;
 
 
-    if(RendaAnual >= 0 & RendaAnual =<4000){
+ //   if(RendaAnual >= 0 & RendaAnual =<4000){
 
     }
 
-}
+
