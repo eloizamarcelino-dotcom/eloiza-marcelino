@@ -4,9 +4,7 @@ public class carro {
     public carro (double velocidade){
         setVelocidade(velocidade);
     }
-    public reducao (double reducao){
-        return reducao;
-    }
+
     public void acelerar (double acelercao) {// valor da aceleracao
         if(acelercao <0 || acelercao>=20){
             throw new IllegalArgumentException("aceleração invalida!");
@@ -31,9 +29,5 @@ public class carro {
 
 
     }
-    public void reduzir (double reducap
 
-    if(reducao <0 || reducao>=30)){
-        throw new IllegalArgumentException("reduzir seu redutedo");
-    }
 }

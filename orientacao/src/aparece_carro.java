@@ -7,7 +7,7 @@ public class aparece_carro {
         c1.acelerar(5);
 
         System.out.println(c1.getVelocidade());
-        c1.reduzir(15 );
+
         System.out.println(c1.getVelocidade());
     }
 }
