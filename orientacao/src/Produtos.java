@@ -3,5 +3,5 @@ public class Produtos {
     private String modelo;
     private double preco;
     private int quantidadeEstoque;
-    
+
 }
