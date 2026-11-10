@@ -1,11 +1,56 @@
 public class conta {
+
     private String nomeTitular;
     private double saldo;
 
-    public void Conta(String nomeTitular, double saldo) {
-        this.nomeTitular = nomeTitular;
-        this.saldo = saldo;
+    public conta(String nomeTitular, double saldo) {
+        setNomeTitular(nomeTitular);
+        setSaldo(saldo);
+    }
 
+    public void sacarValor(double saque) {
+        if (saque <= 0 || saque > saldo) {
+            throw new IllegalArgumentException("Erro, valor de saque inválido");
+        }
+        saldo -= saque;
+    }
+
+    public void depositarValor(double deposito) {
+        if (deposito <= 0) {
+            throw new IllegalArgumentException("Erro, valor de deposito inválido");
+        }
+        saldo += deposito;
+    }
+
+    /*
+     * Este método estabelece uma relação entre objetos. O objeto atual interage
+     * diretamente com outro objeto do mesmo tipo (a 'contadestino' passada como
+     * parâmetro).
+     */
+    public void transferirValor(double v, conta contaDestino) {
+        // Validação: Garante que o objeto de destino existe (não é nulo) antes de
+        // interagir com ele
+        if (v <= 0 || contaDestino == null || v > saldo) {
+            throw new IllegalArgumentException("Transferencia Invalida");
+        }
+
+        // Altera o estado do objeto atual (this) diminuindo o seu saldo
+        saldo -= v;
+
+        // contadestino.depositarValor(v);
+
+        /*
+         * Comunicação entre objetos: Aqui, o objeto atual modifica diretamente o estado
+         * interno do objeto 'contadestino'.
+         */
+        contaDestino.saldo += v;
+    }
+
+    public double simularInvestimento(double valorInvestido, int tempo) {
+        if (tempo <= 0 || valorInvestido <= 0) {
+            throw new IllegalArgumentException("Erro, tempo ou valor investido inválido");
+        }
+        return valorInvestido * Math.pow(1.01, tempo);
     }
 
     public String getNomeTitular() {
@@ -13,47 +58,22 @@ public class conta {
     }
 
     public void setNomeTitular(String nomeTitular) {
+        if (nomeTitular == null || nomeTitular.isBlank()) {
+            throw new IllegalArgumentException("Nome inválido");
+        }
         this.nomeTitular = nomeTitular;
     }
 
-    public double getsaldo() {
+    public double getSaldo() {
         return saldo;
     }
 
-    public void setsaldo(double saldo) {
-        this.saldo = this.saldo;
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
-    public void sacar(double valor) {
-        if (valor > 0 && saldo >= valor) {
-            saldo -= valor;
-            System.out.println("saque realizado!");
-        } else {
-            System.out.println("saque nao efetuado por fata de saldo!");
-        }
+    @Override
+    public String toString() {
+        return "Conta [nomeTitular=" + nomeTitular + ", saldo=" + saldo + "]";
     }
-        public void depositar (double valor){
-           if(valor>0){
-               saldo=+valor;
-               System.out.println("deposito realizado");
-           }else{
-               System.out.println("Saldo insuficiente!");
-           }
-
-        }
-        public void transferir(conta contaDestino, double valor) {
-            if (valor > 0 && saldo >= valor) {
-                saldo -= valor;
-                contaDestino.depositar(valor);
-                System.out.println("transferenciarealizado com sucaesso");
-            } else {
-                System.out.println("saldo insuficiente");
-            }
-        }
-        public double simularInvestiento(double valor , int meses){
-        double taxa =  0.01;
-        double montante = valor * Math.pow(1 + taxa, meses);
-        return montante;
-
-        }
-    }
+}

@@ -1,22 +1,35 @@
 public class cricao {
     public static void main(String[] args) {
-        conta c1 = new conta("joao ", 1000);
-        conta c2 = new conta("matheus", 500);
+        // Criação (instanciação) da primeira conta (c1) pertencente à "Ana" com saldo
+        // inicial de 1000
+        conta c1 = new conta("Ana", 1000);
 
-        c1.depositar(300);
+        // Criação (instanciação) da segunda conta (c2) pertencente ao "João" com saldo
+        // inicial de 500
+        conta c2 = new conta("João", 500);
 
-        c1.depositar(300);
+        // Deposita 400 na conta c1 (saldo de c1 passa a ser 1400)
+        c1.depositarValor(400);
 
-        c1.transferir(c2,100);
+        // Saca 500 da conta c1 (saldo de c1 passa a ser 900)
+        c1.sacarValor(500);
 
-        double resultado = c1.simularInvestiento(100+12);
+        // Imprime os dados atuais da conta c1 (Nome: Ana, Saldo: 900)
+        System.out.println(c1);
 
-        System.out.println("valor do investmento : " + resultado);
+        // Transfere 500 da conta c1 para a conta c2
+        // c1 perde 500 (fica com 400) e c2 ganha 500 (fica com 1000)
+        c1.transferirValor(500, c2);
 
-        System.out.println("titular: "+ c1.getNomeTitular());
-        System.out.println("saldo de joao : "+ c1.getsaldo());
+        // Imprime os dados atualizados da conta c1 (Nome: Ana, Saldo: 400)
+        System.out.println(c1);
 
-        System.out.println("titular " + c2.getsaldo());
-        System.out.println("saldide maria : "+ c2.getsaldo());
+        // Imprime os dados atualizados da conta c2 (Nome: João, Saldo: 1000)
+        System.out.println(c2);
+
+        // Simula um investimento de 500 na conta c2 por 10 períodos (meses/anos) a 1%
+        // ao período
+        // e imprime apenas o valor futuro calculado (não altera o saldo real da c2)
+        System.out.println(c2.simularInvestimento(500, 10));
     }
 }
