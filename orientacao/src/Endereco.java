@@ -53,7 +53,7 @@ public class Endereco {
         this.numero = numero;
     }
 
-    // Método para exibir o endereço
+
     public void exibirEndereco() {
         System.out.println("UF: " + uf);
         System.out.println("Cidade: " + cidade);

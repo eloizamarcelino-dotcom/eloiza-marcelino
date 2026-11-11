@@ -6,7 +6,7 @@ public class msotrar {
         Endereco endereco1 = new Endereco(
                 "SC",
                 "Blumenau",
-                "89010-000",
+                "89000000",
                 "Rua XV de Novembro",
                 100
         );

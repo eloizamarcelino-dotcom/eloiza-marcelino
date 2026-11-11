@@ -25,7 +25,7 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
-    // Método para exibir os dados da pessoa
+
     public void exibirPessoa() {
         System.out.println("Nome: " + nome);
         System.out.println("Endereço:");
